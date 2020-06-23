@@ -83,6 +83,7 @@
                 console.log("User Data: " + userData);
                 
                 var xmlDoc = xml.responseXML;
+                console.log("XML Doc: " + xmlDoc);
                 var myData = xmlDoc.getElementsByTagName(userData)[0].getElementsByTagName("prompt");
                 console.log("My Data: " + myData);
                 var number = Math.floor(Math.random() * myData.length + 1);
