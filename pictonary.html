@@ -85,6 +85,7 @@
                 var xmlDoc = xml.responseXML;
                 var myData = xmlDoc.getElementsByTagName(userData)[0].getElementsByTagName("prompt");
                 console.log(myData);
+                console.log(myData);
                 var number = Math.floor(Math.random() * myData.length + 1);
                 var formattedData = "<div class='row'>" + "<div class='col-lg-3 prompt'><p>" + myData[number].getElementsByTagName("name")[0].childNodes[0].nodeValue + "</p></div><div class='col-lg-3'><img class='promptImage' src=" + myData[number].getElementsByTagName("imageA")[0].childNodes[0].nodeValue + " alt='imageA'></div><div class='col-lg-3 promptImage'><img class='promptImage' src=" + myData[number].getElementsByTagName("imageB")[0].childNodes[0].nodeValue + " alt='imageB'></div><div class='col-lg-3'><img class='promptImage' src=" + myData[number].getElementsByTagName("imageC")[0].childNodes[0].nodeValue + " alt='imageC'></div></div>";
                 document.getElementById("prompts").innerHTML = formattedData;
