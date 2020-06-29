@@ -73,18 +73,19 @@
                         mineTwo(this);
                     }
                 };
-                xhttp.open("GET", "http://localhost/OnlineGames/pictionary.xml", true);
+                xhttp.open("GET", "https://confident-khorana-235110.netlify.app/pictionary.xml", true);
                 xhttp.send();
             }
             function mineTwo(xml){
                 var i;
                 var userData = document.getElementById("categories");
                 userData = userData.options[userData.selectedIndex].text.split(" ")[0];
-                console.log(userData);
+                console.log("User Data: " + userData);
                 
                 var xmlDoc = xml.responseXML;
+                console.log("XML Doc: " + xmlDoc);
                 var myData = xmlDoc.getElementsByTagName(userData)[0].getElementsByTagName("prompt");
-                console.log(myData);
+                console.log("My Data: " + myData);
                 var number = Math.floor(Math.random() * myData.length + 1);
                 var formattedData = "<div class='row'>" + "<div class='col-lg-3 col-sm-12 prompt'><p>" + myData[number].getElementsByTagName("name")[0].childNodes[0].nodeValue + "</p></div><div class='col-lg-3 col-sm-12'><img class='promptImage' src=" + myData[number].getElementsByTagName("imageA")[0].childNodes[0].nodeValue + " alt='imageA'></div><div class='col-lg-3 col-sm-12 promptImage'><img class='promptImage' src=" + myData[number].getElementsByTagName("imageB")[0].childNodes[0].nodeValue + " alt='imageB'></div><div class='col-lg-3 col-sm-12'><img class='promptImage' src=" + myData[number].getElementsByTagName("imageC")[0].childNodes[0].nodeValue + " alt='imageC'></div></div>";
                 document.getElementById("prompts").innerHTML = formattedData;
