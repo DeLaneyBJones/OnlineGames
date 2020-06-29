@@ -1,0 +1,185 @@
+<!--
+    color 1: #fff5cc
+    color 2: #3B7080
+    color 3: #B8B3BE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Guess Who</title>
+    
+</head>
+<body onload="loadPlayerCard()">
+    <div class="container-fluid myHeader">
+        <div class="row">
+            <div class="col-lg-3 col-sm-3">
+                <img src="images/Characters/cupcakeSpider.png" alt="Cupcake Spider">
+            </div>
+            <div class="col-lg-4 col-sm-9">
+                <h1>DeLaney's Zoom Games</h1>
+            </div>
+        </div>
+        <div class="row myNav">
+            <ul class="list-inline">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pictonary.html">Pictionary</a></li>
+                <li class="active"><a href="guessWho.html">Guess Who</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 guessWho" id="playerCard">
+                </div>
+            </div>
+            <div class="row display-flex guessWho">
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Ariel.png" id="Ariel" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Ariel')">Ariel</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Jasmine.jpg" id="Jasmine" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Jasmine')">Jasmine</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Belle.jpg" id="Belle" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Belle')">Belle</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Tiana.jpg" id="Tiana" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Tiana')">Tiana</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/SnowWhite.jpg" id="SnowWhite" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('SnowWhite')">Snow White</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Rapunzel.jpg" id="Rapunzel" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Rapunzel')">Rapunzel</p>
+                </div>
+            </div>
+            <div class="row display-flex guessWho">
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Cinderela.jpg" id="Cinderella" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Cinderella')">Cinderella</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Aurora.jpg" id="Aurora" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Aurora')">Aurora</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Pocahontas.jpg" id="Pocahontas" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Pocahontas')">Pocahontas</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Tink.jpg" id="Tink" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Tink')">Tink</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Mulan.png" id="Mulan" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Mulan')">Mulan</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Elsa.jpg" id="Elsa" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Elsa')">Elsa</p>
+                </div>
+            </div>
+            <div class="row display-flex guessWho">
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Lilo.jpg" id="Lilo" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Lilo')">Lilo</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Alice.png" id="Alice" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Alice')">Alice</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Esmeralda.png" id="Esmeralda" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Esmeralda')">Esmeralda</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Anna.jpg" id="Anna" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Anna')">Anna</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Megara.jpg" id="Megara" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Megara')">Megara</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Jane.jpg" id="Jane" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Jane')">Jane</p>
+                </div>
+            </div>
+            <div class="row display-flex guessWho">
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Minnie.jpg" id="Minnie" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Minnie')">Minnie</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Sophia.jpg" id="Sophia" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Sophia')">Sophia</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Giselle.jpg" id="Giselle" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Giselle')">Giselle</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Marian.jpg"  id="Marian" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Marian')">Marian</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Merida.jpeg" id="Merida" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Merida')">Merida</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <img src="images/guessWho/princessChart/Kidagakash.jpg" id="Kidagakash" onclick="hideCard(this.id)">
+                    <p onclick="hideCard('Kidagakash')">Kidagakash</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            var options = ["Ariel", "Jasmin", "Belle", "Tiana", "Snow White", "Rapunzel", "Cinderella", "Aurora", "Pocahontas", "Tink", "Mulan", "Elsa", "Lilo", "Alice", "Esmerelda", "Anna", "Megara", "Jane", "Minnie", "Sophia", "Giselle", "Marian", "Merida", "Kidagakash"];
+            var optionPhotos = ["images/guessWho/princessChart/Ariel.png", "images/guessWho/princessChart/Jasmine.jpg", "images/guessWho/princessChart/Belle.jpg", "images/guessWho/princessChart/Tiana.jpg", "images/guessWho/princessChart/SnowWhite.jpg", "images/guessWho/princessChart/Rapunzel.jpg", "images/guessWho/princessChart/Cinderela.jpg", "images/guessWho/princessChart/Aurora.jpg", "images/guessWho/princessChart/Pocahontas.jpg", "images/guessWho/princessChart/Tink.jpg", "images/guessWho/princessChart/Mulan.png", "images/guessWho/princessChart/Elsa.jpg", "images/guessWho/princessChart/Lilo.jpg", "images/guessWho/princessChart/Alice.png", "images/guessWho/princessChart/Esmeralda.png", "images/guessWho/princessChart/Anna.jpg", "images/guessWho/princessChart/Megara.jpg", "images/guessWho/princessChart/Jane.jpg", "images/guessWho/princessChart/Minnie.jpg", "images/guessWho/princessChart/Sophia.jpg", "images/guessWho/princessChart/Giselle.jpg", "images/guessWho/princessChart/Marian.jpg", "images/guessWho/princessChart/Merida.jpeg", "images/guessWho/princessChart/Kidagakash.jpg"];
+            function loadPlayerCard(){
+                var number = Math.floor(Math.random() * options.length);
+                var card = " <img src=" + optionPhotos[number] + " alt='Player card failed to load'> <p>" + options[number] + "</p>";
+                document.getElementById("playerCard").innerHTML = card;
+            }
+            function hideCard(id){
+                var value = document.getElementById(id);
+                console.log("Start!");
+                var isHidden = window.getComputedStyle(value).visibility;
+                if (isHidden == "hidden"){
+                    value.style.visibility = "visible";
+                    console.log("A");
+                }  
+                else if (isHidden == "visible")
+                {
+                    value.style.visibility = "hidden";
+                    console.log("B - " + isHidden);
+                }
+                //console.log(window.getComputedStyle(value).visibility);
+                //console.log(value.style.visibility);
+            }
+        </script>
+   </main>
+</body>
+</html>
+
+<!--
+    Flex code column height (CSS 8-15): https://medium.com/wdstack/bootstrap-equal-height-columns-d07bc934eb27
+    start() code: https://www.w3schools.com/howto/howto_js_countdown.asp
+    None of the images are mine
+
+                    xhttp.open("GET", "http://localhost/OnlineGames/pictionary.xml", true);
+
+-->
